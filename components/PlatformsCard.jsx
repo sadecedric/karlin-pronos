@@ -23,7 +23,7 @@ function CopyIcon() {
 
 function CheckIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" strokeWidth="2.5" className="w-3.5 h-3.5">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#13a478" strokeWidth="2.5" className="w-3.5 h-3.5">
       <polyline points="20 6 9 17 4 12" />
     </svg>
   );
@@ -53,10 +53,10 @@ export default function PlatformsCard() {
   return (
     <div className="px-3 pt-3 pb-1">
       <div
-        className="rounded-xl px-3 py-2.5 shadow-sm"
-        style={{ background: '#ffffff', border: '1px solid #d1d5db' }}
+        className="rounded-2xl px-3 py-2.5"
+        style={{ background: '#07111f', border: '1px solid rgba(245,184,65,.4)', boxShadow: '0 8px 24px rgba(7,17,31,.16)' }}
       >
-        <p className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: '#6b7280' }}>
+        <p className="text-[10px] font-bold uppercase tracking-[.18em] mb-2" style={{ color: '#f5b841' }}>
           Plateformes recommandées
         </p>
 
@@ -65,14 +65,14 @@ export default function PlatformsCard() {
             <div
               key={p.name}
               className="flex items-center gap-1.5 rounded-full px-2.5 py-1.5"
-              style={{ background: '#f3f4f6', border: '1px solid #d1d5db' }}
+              style={{ background: 'rgba(255,255,255,.08)', border: '1px solid rgba(255,255,255,.12)' }}
             >
               <a
                 href={p.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 text-xs font-semibold transition-colors"
-                style={{ color: '#111827' }}
+                style={{ color: '#f8fafc' }}
                 title={`Rejoindre ${p.name}`}
               >
                 <ExternalLinkIcon />
@@ -81,14 +81,14 @@ export default function PlatformsCard() {
 
               {p.code && (
                 <>
-                  <span className="text-xs font-mono font-bold" style={{ color: '#dc2626' }}>
+                  <span className="text-xs font-mono font-bold" style={{ color: '#f5b841' }}>
                     {p.code}
                   </span>
                   <button
                     type="button"
                     onClick={() => handleCopy(p.code, p.name)}
                     className="transition-colors ml-0.5"
-                    style={{ color: copiedName === p.name ? '#dc2626' : '#6b7280' }}
+                    style={{ color: copiedName === p.name ? '#34d399' : '#94a3b8' }}
                     title={`Copier le code ${p.code}`}
                     aria-label={`Copier le code ${p.code}`}
                   >
@@ -100,8 +100,8 @@ export default function PlatformsCard() {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 pt-2" style={{ borderTop: '1px solid #e5e7eb' }}>
-          <span className="text-xs" style={{ color: '#6b7280' }}>
+        <div className="flex items-center gap-2 pt-2" style={{ borderTop: '1px solid rgba(255,255,255,.1)' }}>
+          <span className="text-xs" style={{ color: '#cbd5e1' }}>
             Retrouve-moi sur
           </span>
           <a

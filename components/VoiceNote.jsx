@@ -89,7 +89,7 @@ export default function VoiceNote({ src }) {
         type="button"
         onClick={togglePlay}
         className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white"
-        style={{ background: '#dc2626' }}
+        style={{ background: '#13a478' }}
         aria-label={isPlaying ? 'Pause' : 'Lecture'}
       >
         {isPlaying ? <PauseIcon /> : <PlayIcon />}
@@ -103,7 +103,7 @@ export default function VoiceNote({ src }) {
         >
           <div
             className="h-full rounded-full"
-            style={{ width: `${progressPct}%`, background: '#dc2626' }}
+            style={{ width: `${progressPct}%`, background: '#13a478' }}
           />
         </div>
         <p className="text-[11px] mt-1" style={{ color: '#6b7280' }}>
@@ -115,7 +115,7 @@ export default function VoiceNote({ src }) {
         type="button"
         onClick={cycleSpeed}
         className="shrink-0 px-2 py-1 rounded-full text-[11px] font-bold"
-        style={{ background: '#f3f4f6', color: '#dc2626', border: '1px solid #d1d5db' }}
+        style={{ background: '#eef8f4', color: '#057a5b', border: '1px solid #b9ded1' }}
         aria-label="Changer la vitesse de lecture"
         title="Vitesse de lecture"
       >

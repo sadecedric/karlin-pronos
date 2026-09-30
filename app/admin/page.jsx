@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -30,7 +30,7 @@ export default function AdminLogin() {
     <div className="min-h-screen flex items-center justify-center bg-gray-950">
       <div className="w-full max-w-sm mx-4 rounded-2xl p-8 bg-gray-900 border border-gray-700 shadow-xl">
         <div className="text-center mb-8">
-          <p className="text-xl font-bold text-white tracking-wide">24DEX</p>
+          <p className="text-xl font-bold text-white tracking-wide">KALIN PRONO</p>
           <p className="text-sm mt-1 text-green-500">Admin Panel</p>
         </div>
 
@@ -56,3 +56,4 @@ export default function AdminLogin() {
     </div>
   );
 }
+

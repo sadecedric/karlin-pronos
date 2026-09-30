@@ -40,16 +40,16 @@ export default function ChatInput({ onSend, disabled }) {
         disabled={disabled}
         className="flex-1 rounded-full px-4 py-2.5 text-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none"
         style={{
-          background: '#ffffff',
-          color: '#111827',
-          border: '1px solid #d1d5db',
+          background: '#fffdf7',
+          color: '#172033',
+          border: '1px solid rgba(7,17,31,.16)',
         }}
         onFocus={(e) => {
-          e.target.style.borderColor = '#dc2626';
-          e.target.style.boxShadow = '0 0 0 2px rgba(220,38,38,0.2)';
+          e.target.style.borderColor = '#13a478';
+          e.target.style.boxShadow = '0 0 0 3px rgba(19,164,120,.15)';
         }}
         onBlur={(e) => {
-          e.target.style.borderColor = '#d1d5db';
+          e.target.style.borderColor = 'rgba(7,17,31,.16)';
           e.target.style.boxShadow = 'none';
         }}
         autoComplete="off"
@@ -58,7 +58,7 @@ export default function ChatInput({ onSend, disabled }) {
         type="submit"
         disabled={!canSend}
         className="shrink-0 w-10 h-10 text-white rounded-full flex items-center justify-center transition-colors shadow"
-        style={{ background: canSend ? '#dc2626' : '#9ca3af', cursor: canSend ? 'pointer' : 'not-allowed' }}
+        style={{ background: canSend ? 'linear-gradient(135deg, #057a5b, #13a478)' : '#9ca3af', cursor: canSend ? 'pointer' : 'not-allowed', boxShadow: canSend ? '0 6px 16px rgba(5,122,91,.25)' : 'none' }}
         aria-label="Envoyer"
       >
         <SendIcon />

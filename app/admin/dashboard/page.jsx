@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
@@ -7,7 +7,7 @@ function StatCard({ label, value, sub }) {
   return (
     <div className="rounded-xl p-4 bg-gray-900 border border-gray-700">
       <p className="text-[10px] uppercase tracking-widest mb-1 text-green-600">{label}</p>
-      <p className="text-2xl font-bold text-white">{value ?? '—'}</p>
+      <p className="text-2xl font-bold text-white">{value ?? 'â€”'}</p>
       {sub && <p className="text-xs mt-0.5 text-gray-500">{sub}</p>}
     </div>
   );
@@ -75,7 +75,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       <div className="sticky top-0 z-10 flex items-center justify-between px-6 py-4 bg-gray-900 border-b border-gray-700 shadow-md">
-        <p className="font-bold text-base text-white">24DEX — Admin</p>
+        <p className="font-bold text-base text-white">KALIN PRONO â€” Admin</p>
         <button
           onClick={logout}
           className="text-xs px-3 py-1.5 rounded-lg text-green-400 bg-gray-800 border border-gray-700 hover:border-green-700 transition-colors"
@@ -118,7 +118,7 @@ export default function Dashboard() {
                 }}
               >
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-xs font-mono text-green-600">{c.id.slice(0, 8)}…</span>
+                  <span className="text-xs font-mono text-green-600">{c.id.slice(0, 8)}â€¦</span>
                   <span className="text-[11px] text-gray-600">{formatDate(c.updated_at)}</span>
                 </div>
                 <p className="text-sm text-gray-300 truncate">{c.first_message ?? '(empty)'}</p>
@@ -133,7 +133,7 @@ export default function Dashboard() {
                   disabled={page === 0}
                   className="text-xs px-3 py-1 rounded-lg disabled:opacity-30 text-green-400 bg-gray-800"
                 >
-                  ← Prev.
+                  â† Prev.
                 </button>
                 <span className="text-xs text-gray-600">{page + 1} / {totalPages}</span>
                 <button
@@ -141,7 +141,7 @@ export default function Dashboard() {
                   disabled={page >= totalPages - 1}
                   className="text-xs px-3 py-1 rounded-lg disabled:opacity-30 text-green-400 bg-gray-800"
                 >
-                  Next →
+                  Next â†’
                 </button>
               </div>
             )}
@@ -154,11 +154,11 @@ export default function Dashboard() {
             >
               <div className="px-4 py-3 flex items-center justify-between flex-shrink-0 border-b border-gray-700">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-green-600">Conversation</p>
-                <button onClick={() => setSelected(null)} className="text-gray-500 text-lg leading-none">×</button>
+                <button onClick={() => setSelected(null)} className="text-gray-500 text-lg leading-none">Ã—</button>
               </div>
               <div className="flex-1 overflow-y-auto p-3 space-y-2">
                 {loadingMsgs ? (
-                  <p className="text-sm text-center py-6 text-gray-600">Loading…</p>
+                  <p className="text-sm text-center py-6 text-gray-600">Loadingâ€¦</p>
                 ) : messages.map((m, i) => (
                   <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                     <div
@@ -185,3 +185,4 @@ export default function Dashboard() {
     </div>
   );
 }
+

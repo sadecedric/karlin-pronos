@@ -3,8 +3,26 @@
 html, body {
   height: 100%;
   margin: 0;
-  background: #e5e7eb;
-  color: #1f2937;
+  background: #07111f;
+  color: #172033;
+}
+
+body { font-family: Arial, Helvetica, sans-serif; }
+
+.chat-shell {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(245, 184, 65, 0.13), transparent 28%),
+    radial-gradient(circle at 88% 42%, rgba(19, 164, 120, 0.1), transparent 32%),
+    linear-gradient(180deg, #f7f3e8 0%, #eef3ef 100%);
+  box-shadow: 0 0 48px rgba(0, 0, 0, 0.35);
+}
+
+.chat-scroll { scrollbar-width: thin; scrollbar-color: #b9c4bd transparent; }
+
+.glass-panel {
+  background: rgba(247, 243, 232, 0.92);
+  border-top: 1px solid rgba(7, 17, 31, 0.1);
+  backdrop-filter: blur(14px);
 }
 
 /* ── Markdown ─────────────────────────────────────────────────────────────── */
@@ -13,13 +31,13 @@ html, body {
 .markdown > *:last-child  { margin-bottom: 0; }
 .markdown p               { margin-bottom: 0.5rem; }
 .markdown p:last-child    { margin-bottom: 0; }
-.markdown strong          { font-weight: 700; color: #b91c1c; }
+.markdown strong          { font-weight: 700; color: #057a5b; }
 .markdown ul   { list-style: disc;    margin-left: 1.25rem; margin-bottom: 0.5rem; }
 .markdown ol   { list-style: decimal; margin-left: 1.25rem; margin-bottom: 0.5rem; }
 .markdown li   { margin-bottom: 0.25rem; line-height: 1.5; }
 .markdown li:last-child { margin-bottom: 0; }
-.markdown a       { color: #b91c1c; text-decoration: underline; text-underline-offset: 2px; word-break: break-all; }
-.markdown a:hover { color: #dc2626; }
+.markdown a       { color: #057a5b; text-decoration: underline; text-underline-offset: 2px; word-break: break-all; }
+.markdown a:hover { color: #035f47; }
 
 /* ── Shimmer animation ────────────────────────────────────────────────────── */
 @keyframes shimmer {
@@ -27,7 +45,7 @@ html, body {
   100% { background-position:  200% center; }
 }
 .shimmer {
-  background: linear-gradient(90deg, #9ca3af, #dc2626, #f59e0b, #dc2626, #9ca3af);
+  background: linear-gradient(90deg, #b9c4bd, #13a478, #f5b841, #13a478, #b9c4bd);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

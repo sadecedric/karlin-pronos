@@ -38,10 +38,10 @@ export default function Header() {
 
   return (
     <header
-      className="shrink-0 flex items-center gap-3 px-4 py-3 z-10 relative shadow-lg"
+      className="shrink-0 flex items-center gap-3 px-4 py-3.5 z-10 relative shadow-xl"
       style={{
-        background: '#f9fafb',
-        borderBottom: '1px solid #d1d5db',
+        background: 'linear-gradient(135deg, #07111f 0%, #102b35 100%)',
+        borderBottom: '2px solid #f5b841',
       }}
     >
       {/* Avatar */}
@@ -50,7 +50,7 @@ export default function Header() {
           src={PROFILE_IMAGE}
           alt={ASSISTANT_NAME}
           className="w-11 h-11 rounded-full object-cover"
-          style={{ border: '2px solid #dc2626' }}
+          style={{ border: '2px solid #f5b841', boxShadow: '0 0 0 3px rgba(245,184,65,.15)' }}
           onError={(e) => {
             e.target.onerror = null;
             e.target.src =
@@ -59,18 +59,18 @@ export default function Header() {
         />
         <span
           className="absolute bottom-0 right-0 w-3 h-3 rounded-full"
-          style={{ background: '#22c55e', outline: '2px solid #f9fafb' }}
+          style={{ background: '#34d399', outline: '2px solid #07111f' }}
         />
       </div>
 
       {/* Name + status */}
       <div className="flex-1 min-w-0">
-        <p className="font-semibold text-sm truncate leading-tight" style={{ color: '#111827' }}>
+        <p className="font-extrabold text-sm tracking-wide truncate leading-tight" style={{ color: '#ffffff' }}>
           {ASSISTANT_NAME}
         </p>
         <div className="flex items-center gap-1.5 mt-0.5">
           <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: '#22c55e' }} />
-          <span className="text-xs font-medium" style={{ color: '#16a34a' }}>En ligne</span>
+          <span className="text-xs font-medium" style={{ color: '#a7f3d0' }}>Expert en ligne</span>
         </div>
       </div>
 
@@ -79,7 +79,7 @@ export default function Header() {
         type="button"
         onClick={() => setMenuOpen((v) => !v)}
         className="shrink-0 flex items-center justify-center w-9 h-9 rounded-xl transition-colors"
-        style={{ color: '#dc2626', background: menuOpen ? 'rgba(220,38,38,0.1)' : 'transparent' }}
+        style={{ color: '#f5b841', background: menuOpen ? 'rgba(245,184,65,.14)' : 'transparent' }}
         aria-label="Menu"
       >
         {menuOpen ? <CloseIcon /> : <BurgerIcon />}
@@ -99,7 +99,7 @@ export default function Header() {
             onMouseEnter={(e) => { e.currentTarget.style.background = '#f3f4f6'; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; }}
           >
-            <span style={{ color: '#dc2626' }}><LockIcon /></span>{' '}Connexion Admin
+            <span style={{ color: '#13a478' }}><LockIcon /></span>{' '}Connexion Admin
           </button>
         </div>
       )}

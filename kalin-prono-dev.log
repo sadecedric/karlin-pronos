@@ -1,0 +1,15 @@
+
+> kalin-prono@0.1.0 dev
+> next dev -p 3010
+
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3010
+- Network:       http://172.30.240.1:3010
+- Environments: .env.local
+✓ Ready in 1996ms
+Creating turbopack project {
+  dir: 'C:\\Users\\LABO-INFOS\\Desktop\\chatbot-G2\\KALIN_PRONO',
+  testMode: true
+}
+
+○ Compiling / ...

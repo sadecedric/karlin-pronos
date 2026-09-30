@@ -1,8 +1,8 @@
-import './globals.css';
+﻿import './globals.css';
 
 export const metadata = {
-  title: '24DEX — Apple of Fortune',
-  description: 'Assistant Apple of Fortune — 24DEX',
+  title: 'KALIN PRONO â€” Apple of Fortune',
+  description: 'Assistant Apple of Fortune â€” KALIN PRONO',
   icons: {
     icon: '/apple.png',
   },
@@ -15,3 +15,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
