@@ -12,14 +12,14 @@ export async function POST(request) {
 
   if (!message || typeof message !== 'string' || message.trim() === '') {
     return Response.json(
-      { error: "The 'message' field is required and cannot be empty." },
+      { error: 'Écris un message pour continuer.' },
       { status: 400 }
     );
   }
 
   if (message.length > MAX_MESSAGE_LENGTH) {
     return Response.json(
-      { error: `Message must not exceed ${MAX_MESSAGE_LENGTH} characters.` },
+      { error: `Ton message ne doit pas dépasser ${MAX_MESSAGE_LENGTH} caractères.` },
       { status: 400 }
     );
   }
@@ -63,7 +63,7 @@ export async function POST(request) {
   } catch (err) {
     console.error('[chat] Mistral call error:', err.message ?? err);
     return Response.json(
-      { error: 'An error occurred. Please try again in a moment.' },
+      { error: 'Une erreur est survenue. Réessaie dans un instant.' },
       { status: 500 }
     );
   }
